@@ -8,19 +8,28 @@ namespace CalculatorApp
 
         public static void GetOperands(string choice)
         {
+
             if (choice == "5")
             {
                 Op.DisplayHistory(listItems);
                 return;
             }
 
-            Console.WriteLine("Enter 1st value: ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter 2nd value: ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
-            SelectOption(choice, num1, num2);
+            try
+            {
+                Console.WriteLine("Enter 1st value: ");
+                double num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter 2nd value: ");
+                double num2 = Convert.ToDouble(Console.ReadLine());
+                SelectOption(choice, num1, num2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Invalid input enter numbers");
+            }
+    
         }
-        public static void SelectOption(string selection, int n1, int n2)
+        public static void SelectOption(string selection, double n1, double n2)
         {
             string resultMessage = "";
 
@@ -36,6 +45,12 @@ namespace CalculatorApp
                     resultMessage = $"Result of mul {n1} * {n2} = {Op.Multiplication(n1, n2)}";
                     break;
                 case "4":
+                    while(n2 == 0)
+                    {
+                        Console.WriteLine("Divisor cant be zero");
+                        Console.WriteLine("Choose divisor again: ");
+                        n2 = Convert.ToDouble(Console.ReadLine());
+                    }
                     resultMessage = $"Result of div {n1} / {n2} = {Op.Division(n1, n2)}";
                     break;
                 default:

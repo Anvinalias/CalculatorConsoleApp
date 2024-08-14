@@ -3,32 +3,24 @@ namespace CalculatorApp
 {
     internal class Operation
     {
-        public int Addition(int num1, int num2)
+        public double Addition(double num1, double num2)
         {
             return num1 + num2; 
         }
 
-        public int Difference(int n1, int n2)
+        public double Difference(double n1, double n2)
         {
             return n1 - n2;
         }
 
-        public int Multiplication(int a, int b)
+        public double Multiplication(double a, double b)
         {
             return a * b;
         }
 
-        public int Division(int x, int y)
+        public double Division(double x, double y)
         {
-            try
-            {
-                return x / y;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return 0;
-            }
+            return x / y;
         }
 
         public static void Display(string res)
@@ -38,6 +30,7 @@ namespace CalculatorApp
 
         public void DisplayHistory(List<string> listItems)
         {
+            Console.WriteLine("Result history");
             foreach (string i in listItems)
             {
                 Console.WriteLine(i);

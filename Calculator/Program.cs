@@ -7,6 +7,9 @@
             string continueChoice;
             string userChoice;
 
+            Console.WriteLine("Console Calculator in C#\r");
+            Console.WriteLine("------------------------\n");
+
             do
             {
                 Console.WriteLine("Choose from below choices ?");
