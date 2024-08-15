@@ -1,11 +1,14 @@
-﻿namespace CalculatorApp
+﻿using CalculatorLibrary;
+
+namespace CalculatorApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string continueChoice;
-            string userChoice;
+            Option Op = new Option();
+            string? continueChoice;
+            string? userChoice;
 
             Console.WriteLine("Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
@@ -28,7 +31,7 @@
                     break;
                 }
 
-                Option.GetOperands(userChoice);
+                Op.GetOperands(userChoice);
 
                 Console.WriteLine("Do you want to continue? Y or N ");
                 continueChoice = Console.ReadLine();
