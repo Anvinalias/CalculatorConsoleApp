@@ -30,6 +30,7 @@ namespace CalculatorApp
                 // if user need to quit
                 if (userChoice == "6")
                 {
+                    // end json
                     opt.JsonFinish();
                     break;
                 }
