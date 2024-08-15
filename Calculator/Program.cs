@@ -6,12 +6,13 @@ namespace CalculatorApp
     {
         static void Main(string[] args)
         {
-            Option Op = new Option();
             string? continueChoice;
             string? userChoice;
 
             Console.WriteLine("Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
+
+            Option opt = new Option();
 
             do
             {
@@ -26,17 +27,19 @@ namespace CalculatorApp
 
                 userChoice = Console.ReadLine();
 
+                // if user need to quit
                 if (userChoice == "6")
                 {
+                    opt.JsonFinish();
                     break;
                 }
 
-                Op.GetOperands(userChoice);
+                opt.GetOperands(userChoice);
 
                 Console.WriteLine("Do you want to continue? Y or N ");
                 continueChoice = Console.ReadLine();
 
-            } while (continueChoice != "n" && continueChoice != "N");
+            } while (continueChoice != "n" && continueChoice != "N"); 
 
         }
     }

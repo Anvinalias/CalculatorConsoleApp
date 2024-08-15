@@ -17,3 +17,4 @@ C:\Users\anvin\Desktop\C#\CalculatorConsoleApp\Calculator\bin\Debug\net8.0\Calcu
 C:\Users\anvin\Desktop\C#\CalculatorConsoleApp\Calculator\bin\Debug\net8.0\CalculatorLibrary.pdb
 C:\Users\anvin\Desktop\C#\CalculatorConsoleApp\Calculator\obj\Debug\net8.0\Calculator.csproj.AssemblyReference.cache
 C:\Users\anvin\Desktop\C#\CalculatorConsoleApp\Calculator\obj\Debug\net8.0\Calculator.csproj.Up2Date
+C:\Users\anvin\Desktop\C#\CalculatorConsoleApp\Calculator\bin\Debug\net8.0\Newtonsoft.Json.dll
