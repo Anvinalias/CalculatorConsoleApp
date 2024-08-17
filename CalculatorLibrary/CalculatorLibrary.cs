@@ -107,7 +107,6 @@ namespace CalculatorLibrary
             writer.Close();
         }
     }
-
     internal class Operation
     {
         public double Addition(double num1, double num2)
@@ -152,4 +151,5 @@ namespace CalculatorLibrary
         }
 
     }
+
 }
