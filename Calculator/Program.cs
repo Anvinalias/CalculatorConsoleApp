@@ -16,7 +16,7 @@ namespace CalculatorApp
 
             do
             {
-                Console.WriteLine("Choose from below choices ?");
+                Console.WriteLine("Choose from below choices:");
 
                 Console.WriteLine("1. Addition");
                 Console.WriteLine("2. Substraction");
@@ -25,6 +25,7 @@ namespace CalculatorApp
                 Console.WriteLine("5. Previous results");
                 Console.WriteLine("6. Quit");
 
+                Console.WriteLine("\nEnter Choice: ");
                 userChoice = Console.ReadLine();
 
                 // if user need to quit
@@ -37,7 +38,8 @@ namespace CalculatorApp
 
                 opt.GetOperands(userChoice);
 
-                Console.WriteLine("Do you want to continue? Y or N ");
+                Console.WriteLine();
+                Console.WriteLine("Press 'N' to quit or any other key to Continue");
                 continueChoice = Console.ReadLine();
 
             } while (continueChoice != "n" && continueChoice != "N"); 
